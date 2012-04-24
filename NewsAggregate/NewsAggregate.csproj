@@ -43,6 +43,7 @@
     <Reference Include="AWSSDK, Version=1.4.6.2, Culture=neutral, PublicKeyToken=cd2d24cd2bace800, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Program Files\AWS SDK for .NET\bin\AWSSDK.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="HtmlSanitizationLibrary">
       <HintPath>..\packages\AjaxControlToolkit.4.1.51116\lib\40\SanitizerProviders\HtmlSanitizationLibrary.dll</HintPath>
@@ -80,6 +81,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="bin\ar\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\AWSSDK.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\AWSSDK.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="bin\cs\AjaxControlToolkit.resources.dll" />
     <Content Include="bin\de\AjaxControlToolkit.resources.dll" />
     <Content Include="bin\es\AjaxControlToolkit.resources.dll" />
