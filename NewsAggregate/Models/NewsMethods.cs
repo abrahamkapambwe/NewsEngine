@@ -273,7 +273,7 @@ namespace RssNewsEngine.Models
                          new ReplaceableAttribute
                          {
                              Name = "ThumbNailUrl",
-                             Value = Convert.ToString(newsItem.ThumbNailUrl),
+                             Value =string.IsNullOrWhiteSpace(newsItem.ThumbNailUrl)?"": Convert.ToString(newsItem.ThumbNailUrl),
                              Replace = true
                          }
                           ,

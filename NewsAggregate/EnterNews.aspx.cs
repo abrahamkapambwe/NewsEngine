@@ -166,6 +166,9 @@ namespace NewsAggregate
                     case "Zimbabwe":
                         images.Url = Settings.Default.BucketNameURL + "/zimbabwe/" + images.fileName;
                         break;
+                    case "South Africa":
+                        images.Url = Settings.Default.BucketNameURL + "/southafrica/" + images.fileName;
+                        break;
                 }
 
                 // images.Url=Settings.Default.
@@ -229,7 +232,7 @@ namespace NewsAggregate
                                              newscomponents.NewsID;
                     NewsEngine.LoadNewsintoTables(newscomponents, Settings.Default.Uganda);
                     break;
-                case "SouthAfrica":
+                case "South Africa":
                     if (newscomponents.ThumbNail != null)
                     {
                         newscomponents.ThumbNailBucketName = Settings.Default.BucketName + "/" + Settings.Default.SouthAfrica;
