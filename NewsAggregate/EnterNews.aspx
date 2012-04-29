@@ -99,7 +99,7 @@
                 Country
             </td>
             <td>
-                <asp:DropDownList ID="ddlCountry" runat="server">
+                <asp:DropDownList ID="ddlCountry" runat="server" AutoPostBack="true" OnSelectedIndexChanged="Selected_Country">
                     <asp:ListItem Text="Select" Value="Select"></asp:ListItem>
                     <asp:ListItem Text="Kenya" Value="Kenya"></asp:ListItem>
                     <asp:ListItem Text="Malawi" Value="Malawi"></asp:ListItem>
@@ -116,9 +116,14 @@
                 Tags
             </td>
             <td>
-                <asp:ListBox ID="LstTags" runat="server" SelectionMode="Multiple">
-                    
-                </asp:ListBox>
+                <asp:UpdatePanel runat="server" ID="updatePanel">
+                    <ContentTemplate>
+                        <asp:ListBox ID="LstTags" runat="server" SelectionMode="Multiple"></asp:ListBox>
+                    </ContentTemplate>
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger EventName="SelectedIndexChanged" ControlID="ddlCountry" />
+                    </Triggers>
+                </asp:UpdatePanel>
             </td>
         </tr>
     </table>

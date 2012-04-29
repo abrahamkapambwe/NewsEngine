@@ -111,6 +111,13 @@ namespace RssNewsEngine.Models
                          Value = Convert.ToString(list.TimeStamp),
                          Replace = true
                     }
+                     ,
+                     new ReplaceableAttribute
+                     {
+                         Name = "TagName",
+                         Value = Convert.ToString(list.TagName),
+                         Replace = true
+                    }
                 };
                 replaceableItem.WithAttribute(list1.ToArray());
                 batchPutAttributesRequest.Item.Add(replaceableItem);
@@ -150,7 +157,24 @@ namespace RssNewsEngine.Models
                         }
                     }
                 }
+                if (newsItem.ThumbNail != null)
+                {
+                    PutObjectRequest putObjectThumbNail = new PutObjectRequest();
+                    putObjectThumbNail.WithBucketName(newsItem.ThumbNailBucketName);
+                    putObjectThumbNail.CannedACL = S3CannedACL.PublicRead;
+                    putObjectThumbNail.Key = Convert.ToString(newsItem.ThumbNailKey);
+                    putObjectThumbNail.InputStream = newsItem.ThumbNail;
 
+
+                    using (S3Response response = s3Client.PutObject(putObjectThumbNail))
+                    {
+                        WebHeaderCollection headers = response.Headers;
+                        foreach (string key in headers.Keys)
+                        {
+                            //log headers ("Response Header: {0}, Value: {1}", key, headers.Get(key));
+                        }
+                    }
+                }
                 PutObjectRequest putObjectNewsItem = new PutObjectRequest();
                 putObjectNewsItem.WithBucketName(newsItem.BucketName);
                 putObjectNewsItem.CannedACL = S3CannedACL.PublicRead;
@@ -245,6 +269,19 @@ namespace RssNewsEngine.Models
                              Name = "Publish",
                              Value = Convert.ToString(newsItem.Publish),
                              Replace = true
+                         },
+                         new ReplaceableAttribute
+                         {
+                             Name = "ThumbNailUrl",
+                             Value = Convert.ToString(newsItem.ThumbNailUrl),
+                             Replace = true
+                         }
+                          ,
+                         new ReplaceableAttribute
+                         {
+                             Name = "TagName",
+                             Value = Convert.ToString(newsItem.TagName),
+                             Replace = true
                          });
 
                 sdbClient.PutAttributes(putAttrRequest);
@@ -334,7 +371,14 @@ namespace RssNewsEngine.Models
                          new ReplaceableAttribute
                          {
                              Name = "Url",
-                             Value = videoItem.Content,
+                             Value = videoItem.Url,
+                             Replace = true
+                         }
+                          ,
+                         new ReplaceableAttribute
+                         {
+                             Name = "Category",
+                             Value = videoItem.Category,
                              Replace = true
                          });
 
@@ -373,6 +417,13 @@ namespace RssNewsEngine.Models
                     Name = "TagName",
                     Value = tags.TagName,
                     Replace = false
+                }
+                ,
+                new ReplaceableAttribute
+                {
+                    Name = "Country",
+                    Value = tags.Country,
+                    Replace = false
                 });
             sdbClient.PutAttributes(putTagRequest);
 
@@ -380,11 +431,11 @@ namespace RssNewsEngine.Models
         }
         #endregion
         #region Get
-        public static List<Tags> GetTags(string domainName,AmazonSimpleDBClient sdbClient)
+        public static List<Tags> GetTags(string domainName, AmazonSimpleDBClient sdbClient)
         {
-            List<Tags> tagses=new List<Tags>();
+            List<Tags> tagses = new List<Tags>();
             Tags tags;
-             String selectExpression = "Select TagId,TagName From " + domainName;
+            String selectExpression = "Select TagId,TagName,Country From " + domainName;
             SelectRequest selectRequestAction = new SelectRequest().WithSelectExpression(selectExpression);
             SelectResponse selectResponse = sdbClient.Select(selectRequestAction);
             if (selectResponse.IsSetSelectResult())
@@ -392,7 +443,7 @@ namespace RssNewsEngine.Models
                 SelectResult selectResult = selectResponse.SelectResult;
                 foreach (Item item in selectResult.Item)
                 {
-                    tags =new Tags();;
+                    tags = new Tags(); ;
                     if (item.IsSetName())
                     {
 
@@ -414,9 +465,12 @@ namespace RssNewsEngine.Models
                                     tags.TagId = Guid.Parse(attribute.Value);
                                     break;
                                 case "TagName":
-                                    tags.TagName= attribute.Value;
+                                    tags.TagName = attribute.Value;
                                     break;
-                               
+                                case "Country":
+                                    tags.Country = attribute.Value;
+                                    break;
+
                             }
                             i++;
                         }
@@ -426,7 +480,7 @@ namespace RssNewsEngine.Models
             }
             return tagses;
         }
-        
+
         #endregion
 
 

@@ -6,9 +6,7 @@
     <File id="095B59E6-D429-4D61-97C7-DFC621F43169/f:SimpleDbMembershipProvider.cs" caret="13683" fromTop="10" />
     <File id="095B59E6-D429-4D61-97C7-DFC621F43169/d:Models/f:RssUrls.cs" caret="0" fromTop="0" />
     <File id="095B59E6-D429-4D61-97C7-DFC621F43169/f:Default.aspx" caret="0" fromTop="0" />
-    <File id="095B59E6-D429-4D61-97C7-DFC621F43169/f:EnterNews.aspx.cs" caret="1766" fromTop="20" />
     <File id="095B59E6-D429-4D61-97C7-DFC621F43169/f:Multimedia.aspx" caret="1940" fromTop="17" />
-    <File id="095B59E6-D429-4D61-97C7-DFC621F43169/f:Multimedia.aspx.cs" caret="4302" fromTop="17" />
     <File id="095B59E6-D429-4D61-97C7-DFC621F43169/d:Models/f:NewsEngine.cs" caret="1794" fromTop="12" />
     <File id="095B59E6-D429-4D61-97C7-DFC621F43169/f:EnterNews.aspx" caret="4871" fromTop="21" />
     <File id="095B59E6-D429-4D61-97C7-DFC621F43169/f:TagsPage.aspx" caret="567" fromTop="11" />
@@ -17,7 +15,9 @@
     <File id="095B59E6-D429-4D61-97C7-DFC621F43169/d:Models/f:NewsComponents.cs" caret="2366" fromTop="18" />
     <File id="095B59E6-D429-4D61-97C7-DFC621F43169/f:Site.Master" caret="495" fromTop="8" />
     <File id="095B59E6-D429-4D61-97C7-DFC621F43169/f:Web.config" caret="617" fromTop="11" />
-    <File id="095B59E6-D429-4D61-97C7-DFC621F43169/d:Models/f:NewsMethods.cs" caret="11320" fromTop="7" />
+    <File id="095B59E6-D429-4D61-97C7-DFC621F43169/f:EnterNews.aspx.cs" caret="1766" fromTop="20" />
+    <File id="095B59E6-D429-4D61-97C7-DFC621F43169/f:Multimedia.aspx.cs" caret="4302" fromTop="17" />
+    <File id="095B59E6-D429-4D61-97C7-DFC621F43169/d:Models/f:NewsMethods.cs" caret="11727" fromTop="14" />
   </RecentFiles>
   <RecentEdits>
     <File id="095B59E6-D429-4D61-97C7-DFC621F43169/f:Multimedia.aspx.cs" caret="2315" fromTop="4" />

@@ -102,8 +102,31 @@ namespace RssNewsEngine.Models
                 images = value;
             }
         }
-        
-
+        public Stream ThumbNail
+        {
+            get;
+            set;
+        }
+        public string ThumbNailUrl
+        {
+            get;
+            set;
+        }
+        public string ThumbNailBucketName
+        {
+            get;
+            set;
+        }
+        public string ThumbNailKey
+        {
+            get;
+            set;
+        }
+        public string TagName
+        {
+            get;
+            set;
+        }
 
     }
     public class Images
@@ -128,6 +151,7 @@ namespace RssNewsEngine.Models
     {
         public Guid TagId { get; set; }
         public string TagName { get; set; }
+        public string Country { get; set; }
     }
     public class Multimedia
     {

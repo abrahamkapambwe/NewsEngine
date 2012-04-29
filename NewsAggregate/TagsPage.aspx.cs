@@ -20,8 +20,10 @@ namespace NewsAggregate
             Tags tags=new Tags();
             tags.TagId = Guid.NewGuid();
             tags.TagName = txtTagName.Text;
+            tags.Country = ddlCountry.SelectedValue;
             NewsEngine.SaveTags(tags, Settings.Default.TagTable);
             lblRsults.Text = "Saved Successully";
         }
+       
     }
 }

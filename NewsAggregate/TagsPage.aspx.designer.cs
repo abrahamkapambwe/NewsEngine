@@ -31,6 +31,15 @@ namespace NewsAggregate {
         protected global::System.Web.UI.WebControls.TextBox txtTagName;
         
         /// <summary>
+        /// ddlCountry control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCountry;
+        
+        /// <summary>
         /// btnSubmit control.
         /// </summary>
         /// <remarks>

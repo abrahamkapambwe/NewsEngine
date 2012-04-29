@@ -84,9 +84,6 @@
     <Content Include="bin\AWSSDK.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="bin\AWSSDK.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="bin\cs\AjaxControlToolkit.resources.dll" />
     <Content Include="bin\de\AjaxControlToolkit.resources.dll" />
     <Content Include="bin\es\AjaxControlToolkit.resources.dll" />
