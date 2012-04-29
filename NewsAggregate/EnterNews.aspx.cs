@@ -94,6 +94,7 @@ namespace NewsAggregate
                     newscomponents.TagName = newscomponents.TagName + LstTags.Items[i].Text + "|";
                 }
             }
+            newscomponents.Publish = "false";
 
             if (rbnNo.Checked)
                 newscomponents.Publish = "false";
