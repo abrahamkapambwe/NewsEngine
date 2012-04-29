@@ -7,3 +7,4 @@ C:\AbEngine\NewsAggregate\NewsAggregate\bin\bin\AntiXSSLibrary.dll
 C:\AbEngine\NewsAggregate\NewsAggregate\bin\bin\HtmlSanitizationLibrary.dll
 C:\AbEngine\NewsAggregate\NewsAggregate\bin\bin\SanitizerProviders.dll
 C:\AbEngine\NewsAggregate\NewsAggregate\bin\bin\AWSSDK.dll
+C:\AbEngine\NewsAggregate\NewsAggregate\obj\Debug\NewsAggregate.csprojResolveAssemblyReference.cache
