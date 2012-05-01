@@ -380,6 +380,13 @@ namespace RssNewsEngine.Models
                              Name = "Category",
                              Value = videoItem.Category,
                              Replace = true
+                         }
+                         ,
+                         new ReplaceableAttribute
+                         {
+                             Name = "YouTubeAdded",
+                             Value = Convert.ToString(videoItem.YouTubeAdded),
+                             Replace = true
                          });
 
                 sdbClient.PutAttributes(putVideoRequest);

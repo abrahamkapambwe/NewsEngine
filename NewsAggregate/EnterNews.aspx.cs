@@ -148,26 +148,26 @@ namespace NewsAggregate
                 }
                 switch (newscomponents.Country)
                 {
-                    case "Kenya":
+                    case "kenya":
 
                         images.Url = Settings.Default.BucketNameURL + "/kenya/" + images.fileName;
                         break;
-                    case "Malawi":
+                    case "malawi":
                         images.Url = Settings.Default.BucketNameURL + "/malawi/" + images.fileName;
                         break;
-                    case "Tanzania":
+                    case "tanzania":
                         images.Url = Settings.Default.BucketNameURL + "/tanzania/" + images.fileName;
                         break;
-                    case "Uganda":
+                    case "uganda":
                         images.Url = Settings.Default.BucketNameURL + "/uganda/" + images.fileName;
                         break;
-                    case "Zambia":
+                    case "zambia":
                         images.Url = Settings.Default.BucketNameURL + "/zambia/" + images.fileName;
                         break;
-                    case "Zimbabwe":
+                    case "zimbabwe":
                         images.Url = Settings.Default.BucketNameURL + "/zimbabwe/" + images.fileName;
                         break;
-                    case "South Africa":
+                    case "southafrica":
                         images.Url = Settings.Default.BucketNameURL + "/southafrica/" + images.fileName;
                         break;
                 }
@@ -183,7 +183,7 @@ namespace NewsAggregate
 
             switch (newscomponents.Country)
             {
-                case "Kenya":
+                case "kenya":
                     if (newscomponents.ThumbNail != null)
                     {
                         newscomponents.ThumbNailBucketName = Settings.Default.BucketName + "/" + Settings.Default.Kenya;
@@ -196,7 +196,7 @@ namespace NewsAggregate
                                              newscomponents.NewsID;
                     NewsEngine.LoadNewsintoTables(newscomponents, Settings.Default.Kenya);
                     break;
-                case "Malawi":
+                case "malawi":
                     if (newscomponents.ThumbNail != null)
                     {
                         newscomponents.ThumbNailBucketName = Settings.Default.BucketName + "/" + Settings.Default.Malawi;
@@ -209,7 +209,7 @@ namespace NewsAggregate
                     NewsEngine.LoadNewsintoTables(newscomponents, Settings.Default.Malawi);
 
                     break;
-                case "Tanzania":
+                case "tanzania":
                     if (newscomponents.ThumbNail != null)
                     {
                         newscomponents.ThumbNailBucketName = Settings.Default.BucketName + "/" + Settings.Default.Tanzania;
@@ -221,7 +221,7 @@ namespace NewsAggregate
                                              newscomponents.NewsID;
                     NewsEngine.LoadNewsintoTables(newscomponents, Settings.Default.Tanzania);
                     break;
-                case "Uganda":
+                case "uganda":
                     if (newscomponents.ThumbNail != null)
                     {
                         newscomponents.ThumbNailBucketName = Settings.Default.BucketName + "/" + Settings.Default.Uganda;
@@ -229,11 +229,11 @@ namespace NewsAggregate
                                                 newscomponents.ThumbNailKey;
                     }
                     newscomponents.BucketName = Settings.Default.BucketName + "/" + Settings.Default.Uganda;
-                    newscomponents.Summary = Settings.Default.BucketNameURL + "/" + Settings.Default.Uganda + " /" +
+                    newscomponents.Summary = Settings.Default.BucketNameURL + "/" + Settings.Default.Uganda + "/" +
                                              newscomponents.NewsID;
                     NewsEngine.LoadNewsintoTables(newscomponents, Settings.Default.Uganda);
                     break;
-                case "South Africa":
+                case "southafrica":
                     if (newscomponents.ThumbNail != null)
                     {
                         newscomponents.ThumbNailBucketName = Settings.Default.BucketName + "/" + Settings.Default.SouthAfrica;
@@ -241,11 +241,11 @@ namespace NewsAggregate
                                                 newscomponents.ThumbNailKey;
                     }
                     newscomponents.BucketName = Settings.Default.BucketName + "/" + Settings.Default.SouthAfrica;
-                    newscomponents.Summary = Settings.Default.BucketNameURL + "/" + Settings.Default.SouthAfrica + " /" +
+                    newscomponents.Summary = Settings.Default.BucketNameURL + "/" + Settings.Default.SouthAfrica + "/" +
                                              newscomponents.NewsID;
                     NewsEngine.LoadNewsintoTables(newscomponents, Settings.Default.SouthAfrica);
                     break;
-                case "Bostwana":
+                case "bostwana":
                     if (newscomponents.ThumbNail != null)
                     {
                         newscomponents.ThumbNailBucketName = Settings.Default.BucketName + "/" + Settings.Default.Bostwana;
@@ -253,11 +253,11 @@ namespace NewsAggregate
                                                 newscomponents.ThumbNailKey;
                     }
                     newscomponents.BucketName = Settings.Default.BucketName + "/" + Settings.Default.Bostwana;
-                    newscomponents.Summary = Settings.Default.BucketNameURL + "/" + Settings.Default.Bostwana + " /" +
+                    newscomponents.Summary = Settings.Default.BucketNameURL + "/" + Settings.Default.Bostwana + "/" +
                                              newscomponents.NewsID;
                     NewsEngine.LoadNewsintoTables(newscomponents, Settings.Default.SouthAfrica);
                     break;
-                case "Zambia":
+                case "zambia":
                     if (newscomponents.ThumbNail != null)
                     {
                         newscomponents.ThumbNailBucketName = Settings.Default.BucketName + "/" + Settings.Default.Zambia;
@@ -269,7 +269,7 @@ namespace NewsAggregate
                                              newscomponents.NewsID;
                     NewsEngine.LoadNewsintoTables(newscomponents, Settings.Default.Zambia);
                     break;
-                case "Zimbabwe":
+                case "zimbabwe":
                     if (newscomponents.ThumbNail != null)
                     {
                         newscomponents.ThumbNailBucketName = Settings.Default.BucketName + "/" + Settings.Default.Zimbabwe;

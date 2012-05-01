@@ -83,6 +83,7 @@
                         <asp:ListItem Text="Sport" Value="Sport"></asp:ListItem>
                         <asp:ListItem Text="LifeStyle" Value="LifeStyle"></asp:ListItem>
                         <asp:ListItem Text="Comedy" Value="Comedy"></asp:ListItem>
+                        <asp:ListItem Text="World News" Value="WorldNews"></asp:ListItem>
                     </asp:DropDownList>
                 </td>
             </tr>
@@ -93,13 +94,13 @@
                 <td>
                     <asp:DropDownList ID="ddlCountry" runat="server">
                         <asp:ListItem Text="Select" Value="Select"></asp:ListItem>
-                        <asp:ListItem Text="Kenya" Value="Kenya"></asp:ListItem>
-                        <asp:ListItem Text="Malawi" Value="Malawi"></asp:ListItem>
-                        <asp:ListItem Text="Tanzania" Value="Tanzania"></asp:ListItem>
-                        <asp:ListItem Text="Uganda" Value="Uganda"></asp:ListItem>
-                        <asp:ListItem Text="Zambia" Value="Zambia"></asp:ListItem>
-                        <asp:ListItem Text="Zimbabwe" Value="Zimbabwe"></asp:ListItem>
-                        <asp:ListItem Text="South Africa" Value="South Africa"></asp:ListItem>
+                        <asp:ListItem Text="Kenya" Value="kenya"></asp:ListItem>
+                        <asp:ListItem Text="Malawi" Value="malawi"></asp:ListItem>
+                        <asp:ListItem Text="Tanzania" Value="tanzania"></asp:ListItem>
+                        <asp:ListItem Text="Uganda" Value="uganda"></asp:ListItem>
+                        <asp:ListItem Text="Zambia" Value="zambia"></asp:ListItem>
+                        <asp:ListItem Text="Zimbabwe" Value="zimbabwe"></asp:ListItem>
+                        <asp:ListItem Text="South Africa" Value="southafrica"></asp:ListItem>
                     </asp:DropDownList>
                 </td>
             </tr>

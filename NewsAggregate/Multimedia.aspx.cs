@@ -33,6 +33,7 @@ namespace NewsAggregate
             multimedia.Country = ddlCountry.SelectedValue;
             multimedia.Title = txtNewsHeadline.Text;
             multimedia.YoutubeUrl = txtSource.Text;
+            multimedia.YouTubeAdded = DateTime.Now;
             if (FileUpload2.HasFile)
             {
                 //uploadFiles = new UploadFiles();
@@ -49,43 +50,43 @@ namespace NewsAggregate
             multimedia.VideoId = Guid.NewGuid();
             switch (multimedia.Country)
             {
-                case "Kenya":
+                case "kenya":
                     multimedia.BucketNameUrl = Settings.Default.BucketName + "/" + Settings.Default.Kenya;
                     multimedia.Url = Settings.Default.BucketNameURL + "/" + Settings.Default.Kenya + "/" + multimedia.fileName;
                     NewsEngine.SaveMultimedia(multimedia, Settings.Default.KenyaVideo);
                     break;
-                case "Malawi":
+                case "malawi":
                     multimedia.BucketNameUrl = Settings.Default.BucketName + "/" + Settings.Default.Malawi;
                     multimedia.Url = Settings.Default.BucketNameURL + "/" + Settings.Default.Malawi + "/" + multimedia.fileName;
                     NewsEngine.SaveMultimedia(multimedia, Settings.Default.MalawiVideo);
                     break;
-                case "Tanzania":
+                case "tanzania":
 
                     multimedia.BucketNameUrl = Settings.Default.BucketName + "/" + Settings.Default.Tanzania;
                     multimedia.Url = Settings.Default.BucketNameURL + "/" + Settings.Default.Tanzania + "/" + multimedia.fileName;
                     NewsEngine.SaveMultimedia(multimedia, Settings.Default.TanzaniaVideo);
                     break;
-                case "Uganda":
+                case "uganda":
                     multimedia.BucketNameUrl = Settings.Default.BucketName + "/" + Settings.Default.Uganda;
                     multimedia.Url = Settings.Default.BucketNameURL + "/" + Settings.Default.Uganda + "/" + multimedia.fileName;
                     NewsEngine.SaveMultimedia(multimedia, Settings.Default.UgandaVideo);
                     break;
-                case "South Africa":
+                case "southafrica":
                     multimedia.BucketNameUrl = Settings.Default.BucketName + "/" + Settings.Default.SouthAfrica;
                     multimedia.Url = Settings.Default.BucketNameURL + "/" + Settings.Default.SouthAfrica + "/" + multimedia.fileName;
                     NewsEngine.SaveMultimedia(multimedia, Settings.Default.SouthAfricaVideo);
                     break;
-                case "Bostwana":
+                case "bostwana":
                     multimedia.BucketNameUrl = Settings.Default.BucketName + "/" + Settings.Default.Bostwana;
                     multimedia.Url = Settings.Default.BucketNameURL + "/" + Settings.Default.Bostwana + "/" + multimedia.fileName;
                     NewsEngine.SaveMultimedia(multimedia, Settings.Default.BostwanaVideo);
                     break;
-                case "Zambia":
+                case "zambia":
                     multimedia.BucketNameUrl = Settings.Default.BucketName + "/" + Settings.Default.Zambia;
                     multimedia.Url = Settings.Default.BucketNameURL + "/" + Settings.Default.Zambia  + "/" + multimedia.fileName;
                     NewsEngine.SaveMultimedia(multimedia, Settings.Default.ZambiaVideo);
                     break;
-                case "Zimbabwe":
+                case "zimbabwe":
                     multimedia.BucketNameUrl = Settings.Default.BucketName + "/" + Settings.Default.Zimbabwe;
                     multimedia.Url = Settings.Default.BucketNameURL + "/" + Settings.Default.Zimbabwe + "/" + multimedia.fileName;
                     NewsEngine.SaveMultimedia(multimedia, Settings.Default.ZimbabweVideo);
