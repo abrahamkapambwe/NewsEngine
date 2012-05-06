@@ -83,6 +83,7 @@
                         <asp:ListItem Text="Sport" Value="Sport"></asp:ListItem>
                         <asp:ListItem Text="LifeStyle" Value="LifeStyle"></asp:ListItem>
                         <asp:ListItem Text="Comedy" Value="Comedy"></asp:ListItem>
+                        <asp:ListItem Text="Tourism" Value="Tourism"></asp:ListItem>
                         <asp:ListItem Text="World News" Value="WorldNews"></asp:ListItem>
                     </asp:DropDownList>
                 </td>
